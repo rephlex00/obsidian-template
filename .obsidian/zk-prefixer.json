@@ -1,0 +1,5 @@
+{
+  "folder": "Moments",
+  "template": "Templates/Moment",
+  "format": "YYYY/MM MMM/YYMMDD HHmm"
+}

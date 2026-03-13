@@ -1,0 +1,80 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - file.inFolder("Moments")
+formulas:
+  month: created.format(MMMM)
+properties:
+  type:
+    displayName: Type
+  subtype:
+    displayName: Subtype
+  summary:
+    displayName: Summary
+  people:
+    displayName: People
+  place:
+    displayName: Place
+  important:
+    displayName: Important
+views:
+  - type: table
+    name: All
+    order:
+      - file.name
+      - type
+      - summary
+      - people
+      - place
+      - formula.month
+    sort:
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      note.people: 193
+  - type: table
+    name: Daily Notes
+    filters:
+      and:
+        - type == "dailynote"
+    order:
+      - file.name
+      - summary
+      - people
+      - place
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Events
+    filters:
+      and:
+        - type == "moment"
+        - subtype == "event"
+    order:
+      - file.name
+      - people
+      - place
+      - organizations
+      - important
+      - dailynote
+    sort:
+      - property: file.ctime
+        direction: DESC
+  - type: table
+    name: Quick Notes
+    filters:
+      and:
+        - type == "moment"
+        - subtype == "quicknote"
+    order:
+      - file.name
+      - summary
+      - people
+      - place
+      - important
+      - dailynote
+    sort:
+      - property: file.ctime
+        direction: DESC

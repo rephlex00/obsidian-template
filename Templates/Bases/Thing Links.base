@@ -1,0 +1,26 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Archive")'
+    - or:
+        - note.dailynote == this.file.asLink()
+        - note.people.contains(this.file.asLink())
+        - note.place == this.file.asLink()
+        - note.organizations.contains(this.file.asLink())
+        - note.organization == this.file.asLink()
+        - note.area == this.file.asLink()
+        - note.projects.contains(this.file.asLink())
+views:
+  - type: table
+    name: Linked Notes
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - subtype
+      - summary
+      - people

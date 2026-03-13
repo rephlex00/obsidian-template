@@ -1,0 +1,62 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - file.inFolder("Focus")
+    - type != "task"
+formulas:
+  daysUntilDue: if(due, ((number(date(due)) - number(today())) / 86400000).floor(), null)
+properties:
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  area:
+    displayName: Area
+  due:
+    displayName: Due
+  formula.daysUntilDue:
+    displayName: Days Until Due
+views:
+  - type: table
+    name: All
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - status
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 166
+      note.type: 116
+  - type: table
+    name: Areas
+    filters:
+      and:
+        - type == "area"
+    order:
+      - file.name
+      - status
+    sort:
+      - property: status
+        direction: ASC
+  - type: table
+    name: Projects
+    filters:
+      and:
+        - type == "project"
+    order:
+      - file.name
+      - status
+      - area
+      - people
+      - due
+      - formula.daysUntilDue
+      - started
+    sort:
+      - property: status
+        direction: ASC

@@ -1,0 +1,26 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - '!file.inFolder("Templates")'
+    - '!file.inFolder("Archive")'
+    - type != "task"
+    - or:
+        - file.ctime == this.date
+properties:
+  type:
+    displayName: Type
+  subtype:
+    displayName: Subtype
+views:
+  - type: table
+    name: Today
+    order:
+      - file.name
+      - type
+      - subtype
+      - title
+    sort: []
+    columnSize:
+      file.name: 158
+      note.subtype: 90

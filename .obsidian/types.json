@@ -1,0 +1,16 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "tags": "tags",
+    "date": "datetime",
+    "people": "multitext",
+    "landmark": "checkbox",
+    "subtype": "text",
+    "created": "datetime",
+    "area": "multitext",
+    "rating": "number",
+    "haha": "datetime",
+    "due": "date"
+  }
+}

@@ -1,0 +1,44 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - 'file.inFolder("Archive")'
+formulas:
+  monthArchived: file.mtime.format("YYYY-MM")
+properties:
+  type:
+    displayName: Type
+  subtype:
+    displayName: Subtype
+  status:
+    displayName: Status
+  formula.monthArchived:
+    displayName: Month
+views:
+  - type: table
+    name: All
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - type
+      - subtype
+      - status
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+  - type: table
+    name: By Month
+    groupBy:
+      property: formula.monthArchived
+      direction: DESC
+    order:
+      - file.name
+      - type
+      - subtype
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC

@@ -1,0 +1,75 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - file.inFolder("Facts")
+properties:
+  type:
+    displayName: Type
+  relationship:
+    displayName: Relationship
+  organizations:
+    displayName: Organizations
+  birthday:
+    displayName: Birthday
+  industry:
+    displayName: Industry
+  website:
+    displayName: Website
+  place:
+    displayName: Place
+  people:
+    displayName: People
+views:
+  - type: table
+    name: All
+    groupBy:
+      property: type
+      direction: ASC
+    order:
+      - file.name
+      - type
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 366
+  - type: table
+    name: People
+    filters:
+      and:
+        - type == "person"
+    order:
+      - file.name
+      - relationship
+      - organizations
+      - birthday
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Places
+    filters:
+      and:
+        - type == "place"
+    order:
+      - file.name
+      - coordinates
+      - rating
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Organizations
+    filters:
+      and:
+        - type == "organization"
+    order:
+      - file.name
+      - industry
+      - place
+      - people
+      - website
+    sort:
+      - property: file.name
+        direction: ASC

@@ -1,0 +1,75 @@
+filters:
+  and:
+    - file.ext == "md"
+    - file.path != this.file.path
+    - file.inFolder("Things")
+properties:
+  subtype:
+    displayName: Type
+  status:
+    displayName: Status
+  mediatype:
+    displayName: Media Type
+  creator:
+    displayName: Creator
+  rating:
+    displayName: Rating
+  source:
+    displayName: Source
+  people:
+    displayName: People
+  place:
+    displayName: Place
+views:
+  - type: table
+    name: All
+    groupBy:
+      property: subtype
+      direction: ASC
+    order:
+      - file.name
+      - subtype
+      - status
+    sort:
+      - property: file.name
+        direction: ASC
+    columnSize:
+      file.name: 240
+      note.subtype: 126
+  - type: cards
+    name: Media
+    filters:
+      and:
+        - subtype == "media"
+    order:
+      - file.name
+      - mediatype
+      - creator
+      - status
+      - rating
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Reference
+    filters:
+      and:
+        - subtype == "reference"
+    order:
+      - file.name
+      - people
+      - source
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Objects
+    filters:
+      and:
+        - subtype == "object"
+    order:
+      - file.name
+      - place
+    sort:
+      - property: file.name
+        direction: ASC

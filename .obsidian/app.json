@@ -1,0 +1,9 @@
+{
+  "openBehavior": "daily",
+  "newFileLocation": "folder",
+  "attachmentFolderPath": "./attachments",
+  "newFileFolderPath": "Moments",
+  "deleteUnlinkedAttachments": "always",
+  "trashOption": "local",
+  "showUnsupportedFiles": true
+}
