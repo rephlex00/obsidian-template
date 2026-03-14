@@ -8,5 +8,6 @@ Archive/*
 *.md
 !Templates/*
 !*.base
+*.canvas
 **/.meta
 **/attachments/

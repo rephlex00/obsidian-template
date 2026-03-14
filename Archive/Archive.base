@@ -2,7 +2,7 @@ filters:
   and:
     - file.ext == "md"
     - file.path != this.file.path
-    - 'file.inFolder("Archive")'
+    - file.inFolder("Archive")
 formulas:
   monthArchived: file.mtime.format("YYYY-MM")
 properties:

@@ -1,12 +1,125 @@
 {
   "collapse-filter": true,
-  "search": "",
+  "search": "-path:Templates -path:Archive -file:.base -file:CLAUDE -file:.png",
   "showTags": false,
-  "showAttachments": false,
-  "hideUnresolved": false,
-  "showOrphans": true,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": false,
   "collapse-color-groups": true,
-  "colorGroups": [],
+  "colorGroups": [
+    {
+      "query": "[type:dailynote]",
+      "color": {
+        "a": 1,
+        "rgb": 183318
+      }
+    },
+    {
+      "query": "[type:moment]",
+      "color": {
+        "a": 1,
+        "rgb": 16096779
+      }
+    },
+    {
+      "query": "[type:person]",
+      "color": {
+        "a": 1,
+        "rgb": 3900150
+      }
+    },
+    {
+      "query": "[type:place]",
+      "color": {
+        "a": 1,
+        "rgb": 6514417
+      }
+    },
+    {
+      "query": "[type:organization]",
+      "color": {
+        "a": 1,
+        "rgb": 959977
+      }
+    },
+    {
+      "query": "[type:thing]",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
+      "query": "[type:area]",
+      "color": {
+        "a": 1,
+        "rgb": 15485081
+      }
+    },
+    {
+      "query": "[type:project]",
+      "color": {
+        "a": 1,
+        "rgb": 15477913
+      }
+    },
+    {
+      "query": "[type:task]",
+      "color": {
+        "a": 1,
+        "rgb": 14239471
+      }
+    },
+    {
+      "query": "[type:supernote]",
+      "color": {
+        "a": 1,
+        "rgb": 2278750
+      }
+    },
+    {
+      "query": "[type:health]",
+      "color": {
+        "a": 1,
+        "rgb": 15680580
+      }
+    },
+    {
+      "query": "[subtype:quicknote]",
+      "color": {
+        "a": 1,
+        "rgb": 14405384
+      }
+    },
+    {
+      "query": "[subtype:event]",
+      "color": {
+        "a": 1,
+        "rgb": 16347926
+      }
+    },
+    {
+      "query": "[subtype:object]",
+      "color": {
+        "a": 1,
+        "rgb": 9133302
+      }
+    },
+    {
+      "query": "[subtype:reference]",
+      "color": {
+        "a": 1,
+        "rgb": 11032055
+      }
+    },
+    {
+      "query": "[subtype:media]",
+      "color": {
+        "a": 1,
+        "rgb": 9468401
+      }
+    }
+  ],
   "collapse-display": true,
   "showArrow": false,
   "textFadeMultiplier": 0,
@@ -17,6 +130,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 1,
+  "scale": 0.8289645747654658,
   "close": true
 }

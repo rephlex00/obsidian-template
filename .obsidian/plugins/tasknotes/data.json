@@ -235,12 +235,12 @@
   "viewsButtonAlignment": "right",
   "hideCompletedFromOverdue": true,
   "icsIntegration": {
-    "defaultNoteTemplate": "",
-    "defaultNoteFolder": "",
+    "defaultNoteTemplate": "Templates/Quick Note.md",
+    "defaultNoteFolder": "[Moments]/YYYY/MM MMM/",
     "icsNoteFilenameFormat": "custom",
-    "customICSNoteFilenameTemplate": "{title}",
+    "customICSNoteFilenameTemplate": "YYMMDD-C ddd {title}",
     "enableAutoExport": true,
-    "autoExportPath": "tasknotes-calendar.ics",
+    "autoExportPath": "Export/tasknotes-calendar.ics",
     "autoExportInterval": 60,
     "useDurationForExport": false,
     "useICSEndAsDue": false
@@ -508,6 +508,15 @@
       "type": "remote",
       "refreshInterval": 60,
       "id": "ics_upufzzxwvmmjvkc28"
+    },
+    {
+      "name": "Family",
+      "url": "http://p25-caldav.icloud.com/published/2/MTA3MTM5ODQyMTA3MTM5OPJE9buYdO5KMcevgXzVn4g9kW6CasS5cpVcZxwkhDn-Rb0ptt2fASvh5XhFbBPlr147qH6GMEldOTttzZt_XsE",
+      "color": "#f3f556",
+      "enabled": true,
+      "type": "remote",
+      "refreshInterval": 60,
+      "id": "ics_uujd3gi0fmmpugwrh"
     }
   ]
 }

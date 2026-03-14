@@ -1,5 +1,5 @@
 {
   "folder": "Moments",
   "template": "Templates/Daily",
-  "format": "YYYY/MM MMM/YYMMDD dddd"
+  "format": "YYYY/MM MMM/YYMMDD[-D] dddd"
 }

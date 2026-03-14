@@ -20,7 +20,7 @@
               "templatePath": "Templates/Moment Quick Note.md",
               "fileNameFormat": {
                 "enabled": true,
-                "format": "{{DATE:YYYY/MM MMM/YYMMDD HHmm}}"
+                "format": "{{DATE:YYYY/MM MMM/YYMMDD[-Q] HHmm}}"
               },
               "folder": {
                 "enabled": true,
@@ -50,7 +50,7 @@
               "templatePath": "Templates/Moment Event.md",
               "fileNameFormat": {
                 "enabled": true,
-                "format": "{{DATE:YYYY/MM MMM/YYMMDD HHmm}}"
+                "format": "{{DATE:YYYY/MM MMM/YYMMDD[-E] HHmm}}"
               },
               "folder": {
                 "enabled": true,

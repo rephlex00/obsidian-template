@@ -27,7 +27,16 @@
       "hiddenFileProperties": [],
       "navigationBanner": null,
       "periodicNotesFolder": "",
-      "shortcuts": [],
+      "shortcuts": [
+        {
+          "type": "note",
+          "path": "Focus/Tasks/Views/Calendar.base"
+        },
+        {
+          "type": "note",
+          "path": "Moments/2026/03 Mar/260314-C Sat Flight AA 4652.md"
+        }
+      ],
       "navRainbow": {
         "mode": "foreground",
         "shortcuts": {
@@ -157,7 +166,7 @@
   "springLoadedFoldersInitialDelay": 0.5,
   "springLoadedFoldersSubsequentDelay": 0.5,
   "showSectionIcons": true,
-  "showShortcuts": false,
+  "showShortcuts": true,
   "shortcutBadgeDisplay": "index",
   "skipAutoScroll": false,
   "showRecentNotes": true,
@@ -445,7 +454,9 @@
   },
   "customVaultName": "",
   "pinnedNotes": {},
-  "fileIcons": {},
+  "fileIcons": {
+    "Focus/Tasks/Views/Calendar.base": "calendar-days"
+  },
   "fileColors": {},
   "fileBackgroundColors": {},
   "folderIcons": {
@@ -538,7 +549,9 @@
   "propertySortOverrides": {},
   "propertyTreeSortOverrides": {},
   "propertyAppearances": {},
-  "virtualFolderColors": {},
+  "virtualFolderColors": {
+    "shortcuts-root": "#dbcf08"
+  },
   "virtualFolderBackgroundColors": {},
   "navigationSeparators": {
     "section:tags": true,
