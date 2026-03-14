@@ -12,4 +12,5 @@ place:
 important: false
 dailynote: "[[{{DATE:[Moments]/YYYY/MM MMM/YYYYMMDD dddd|ddd MMM D, YYYY}}]]"
 color: "#dbcf08"
+icon: LiStickyNote
 ---

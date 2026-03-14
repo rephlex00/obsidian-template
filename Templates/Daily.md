@@ -8,7 +8,7 @@ title: "{{DATE:ddd MMM DD, YYYY}}"
 summary:
 people:
 place:
-icon: calendar
+icon: LiCalendar
 color: "#02cc16"
 ---
 ## Notes

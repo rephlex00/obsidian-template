@@ -8,6 +8,7 @@ coordinates:
 rating:
 dailynote: "[[{{DATE:[Moments]/YYYY/MM MMM/YYYYMMDD dddd|ddd MMM D, YYYY}}]]"
 color: "#6366f1"
+icon: LiMapPin
 ---
 
 ## Linked Notes

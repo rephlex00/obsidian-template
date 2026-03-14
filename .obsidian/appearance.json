@@ -1,4 +1,6 @@
 {
   "cssTheme": "Things",
-  "translucency": true
+  "translucency": true,
+  "floatingNavigation": true,
+  "slidingSidebar": true
 }

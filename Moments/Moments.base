@@ -5,6 +5,7 @@ filters:
     - file.inFolder("Moments")
 formulas:
   month: created.format(MMMM)
+  title: file.asLink(title)
 properties:
   type:
     displayName: Type
@@ -22,8 +23,8 @@ views:
   - type: table
     name: All
     order:
-      - file.name
       - type
+      - formula.title
       - summary
       - people
       - place
@@ -32,6 +33,7 @@ views:
       - property: file.ctime
         direction: DESC
     columnSize:
+      formula.title: 229
       note.people: 193
   - type: table
     name: Daily Notes

@@ -12,6 +12,7 @@ important: false
 summary:
 dailynote: "[[{{DATE:[Moments]/YYYY/MM MMM/YYYYMMDD dddd|ddd MMM D, YYYY}}]]"
 color: "#f97316"
+icon: LiTicket
 ---
 
 ## Linked Notes

@@ -13,6 +13,7 @@ phone:
 email:
 dailynote: "[[{{DATE:[Moments]/YYYY/MM MMM/YYYYMMDD dddd|ddd MMM D, YYYY}}]]"
 color: "#3b82f6"
+icon: LiUser2
 ---
 
 ## Linked Notes

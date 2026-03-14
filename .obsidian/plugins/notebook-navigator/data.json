@@ -54,7 +54,7 @@
           "firstColor": "#ef4444",
           "lastColor": "#8b5cf6",
           "transitionStyle": "hue",
-          "scope": "child"
+          "scope": "all"
         },
         "properties": {
           "enabled": false,
@@ -90,7 +90,7 @@
     "compactItemHeightScaleText": "synced",
     "featureImageSize": "synced",
     "featureImagePixelSize": "synced",
-    "uiScale": "synced"
+    "uiScale": "local"
   },
   "createNewNotesInNewTab": true,
   "autoRevealActiveFile": true,
@@ -111,8 +111,7 @@
   "showTooltips": true,
   "showTooltipPath": true,
   "desktopBackground": "separate",
-  "desktopScale": 1.05,
-  "mobileScale": 1,
+  "mobileScale": 0.9,
   "useFloatingToolbars": true,
   "toolbarVisibility": {
     "navigation": {
@@ -134,7 +133,7 @@
   },
   "interfaceIcons": {},
   "colorIconOnly": false,
-  "dateFormat": "MMM D, YYYY",
+  "dateFormat": "YYYY-MM-DD",
   "timeFormat": "h:mm a",
   "calendarTemplateFolder": "Templates",
   "confirmBeforeDelete": true,
@@ -168,7 +167,7 @@
   "showFolderIcons": true,
   "showRootFolder": false,
   "inheritFolderColors": true,
-  "folderSortOrder": "alpha-asc",
+  "folderSortOrder": "alpha-desc",
   "enableFolderNotes": true,
   "folderNoteType": "base",
   "folderNoteName": "",
@@ -182,7 +181,7 @@
   "showTagIcons": true,
   "showAllTagsFolder": true,
   "showUntagged": false,
-  "tagSortOrder": "alpha-asc",
+  "tagSortOrder": "frequency-desc",
   "inheritTagColors": true,
   "keepEmptyTagsProperty": false,
   "showProperties": true,
@@ -192,9 +191,9 @@
   "showAllPropertiesFolder": true,
   "defaultListMode": "standard",
   "includeDescendantNotes": true,
-  "defaultFolderSort": "created-desc",
-  "propertySortKey": "",
-  "propertySortSecondary": "created",
+  "defaultFolderSort": "property-desc",
+  "propertySortKey": "created",
+  "propertySortSecondary": "title",
   "revealFileOnListChanges": true,
   "listPaneTitle": "header",
   "noteGrouping": "folder",
@@ -217,7 +216,7 @@
   "frontmatterNameField": "title",
   "frontmatterCreatedField": "created",
   "frontmatterModifiedField": "",
-  "frontmatterDateFormat": "YYYY-MM-DD[T]HHmmss",
+  "frontmatterDateFormat": "YYYY-MM-DD[T]HH:mm:ss",
   "showFileIconUnfinishedTask": true,
   "showFileBackgroundUnfinishedTask": false,
   "unfinishedTaskBackgroundColor": "#ef000050",
@@ -243,13 +242,15 @@
     "summary"
   ],
   "showFeatureImage": true,
-  "featureImageProperties": [],
+  "featureImageProperties": [
+    "coverimage"
+  ],
   "featureImageExcludeProperties": [],
-  "featureImageSize": "64",
+  "featureImageSize": "128",
   "featureImagePixelSize": "256",
-  "forceSquareFeatureImage": true,
+  "forceSquareFeatureImage": false,
   "downloadExternalFeatureImages": true,
-  "showFileTags": true,
+  "showFileTags": false,
   "colorFileTags": true,
   "prioritizeColoredFileTags": true,
   "showFileTagAncestors": true,
@@ -263,7 +264,7 @@
   "enablePropertyExternalLinks": true,
   "notePropertyType": "none",
   "showFileDate": true,
-  "alphabeticalDateMode": "modified",
+  "alphabeticalDateMode": "created",
   "showParentFolder": true,
   "parentFolderClickRevealsFile": true,
   "showParentFolderColor": true,
@@ -444,16 +445,8 @@
   },
   "customVaultName": "",
   "pinnedNotes": {},
-  "fileIcons": {
-    "Templates/Person.md": "user-2",
-    "Templates/Place.md": "map-pin",
-    "Templates/Moment Quick Note.md": "sticky-note",
-    "Templates/Moment Event.md": "ticket",
-    "Templates/Daily.md": "calendar"
-  },
-  "fileColors": {
-    "Templates/Daily.md": "#02cc16"
-  },
+  "fileIcons": {},
+  "fileColors": {},
   "fileBackgroundColors": {},
   "folderIcons": {
     "Moments": "clock",
@@ -474,7 +467,8 @@
     "Focus/Areas": "layers",
     "Focus/Projects": "folder-kanban",
     "Focus/Tasks": "list-checks",
-    "Focus/Tasks/Views": "scan-eye"
+    "Focus/Tasks/Views": "scan-eye",
+    "Health": "heart"
   },
   "folderColors": {
     "Moments": "#f59e0b",
@@ -487,7 +481,8 @@
     "Focus": "#d946ef",
     "Archive": "#6b7280",
     "Templates": "#78716c",
-    "Focus/Tasks": "#ec4899"
+    "Focus/Tasks": "#d946ef",
+    "Health": "#ef4444"
   },
   "folderBackgroundColors": {},
   "folderSortOverrides": {},
@@ -517,7 +512,9 @@
     "key:subtype=object": "box",
     "key:subtype=reference": "book-open",
     "key:subtype=media": "film",
-    "key:subtype": "file-type"
+    "key:subtype": "file-type",
+    "key:type=supernote": "notebook-pen",
+    "key:type=health": "heart"
   },
   "propertyColors": {
     "key:type=dailynote": "#02cc16",
@@ -533,7 +530,9 @@
     "key:subtype=media": "#9079f1",
     "key:type=area": "#ec4899",
     "key:type=project": "#ec2c99",
-    "key:type=task": "#d946ef"
+    "key:type=task": "#d946ef",
+    "key:type=supernote": "#22c55e",
+    "key:type=health": "#ef4444"
   },
   "propertyBackgroundColors": {},
   "propertySortOverrides": {},
@@ -576,6 +575,7 @@
     "Facts",
     "Things",
     "Focus",
+    "Health",
     "Archive",
     "Templates"
   ],
